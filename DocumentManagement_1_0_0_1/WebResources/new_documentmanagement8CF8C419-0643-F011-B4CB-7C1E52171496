@@ -1,0 +1,236 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Upload Files to Sharepoint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #dropZone {
+            width: 100%;
+            height: 150px;
+            border: 2px dashed #999;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+
+            #dropZone.hover {
+                background-color: #e0e0e0;
+            }
+
+        #fileList {
+            margin-top: 20px;
+        }
+
+        .file-item {
+            padding: 6px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .file-item a {
+                text-decoration: none;
+                color: #0078d4;
+            }
+    </style>
+    <meta>
+<meta></head>
+<body>
+    <h3>Upload Files to Sharepoint</h3>
+    <div id="dropZone">Drag &amp; Drop Files Here or Click to Upload</div>
+    <input type="file" id="fileInput" multiple="" style="display:none;">
+    <div id="fileList"><strong>Uploaded Files:</strong></div>
+
+    <script>
+        const Xrm = window.parent.Xrm;
+        if (!Xrm) {
+            alert("This control must be hosted inside a Dynamics 365 form.");
+            throw new Error("Xrm is not available.");
+        }      
+
+        var Guid = Xrm.Page.data.entity.getId().replace("{", "").replace("}", "").toUpperCase();
+        var opportunityString = "Opportunity_" + Guid;
+        var pushFileURL = "";
+        var getFileURL = "";
+
+        let dropZone = document.getElementById("dropZone");
+        let fileInput = document.getElementById("fileInput");
+        let fileList = document.getElementById("fileList");
+
+        dropZone.addEventListener("click", () => fileInput.click());
+        dropZone.addEventListener("dragover", e => {
+            e.preventDefault();
+            dropZone.classList.add("hover");
+        });
+        dropZone.addEventListener("dragleave", () => {
+            dropZone.classList.remove("hover");
+        });
+        dropZone.addEventListener("drop", e => {
+            e.preventDefault();
+            dropZone.classList.remove("hover");
+            handleFiles(e.dataTransfer.files);
+        });
+        fileInput.addEventListener("change", e => handleFiles(e.target.files));
+
+        async function handleFiles(files) {
+            for (let file of files) {
+                await uploadFileAsNote(file);
+            }
+        }
+
+        async function uploadFileAsNote(file) {
+            const xrm = window.parent.Xrm;
+            const reader = new FileReader();
+
+            reader.onload = async function (e) {
+                const base64Data = e.target.result.split(',')[1];
+                try {
+                    
+                    const payload = {
+                        OpportunityName: opportunityString,
+                        FileName: file.name,
+                        FileContent: base64Data
+                    };
+                    // const flowURL = "https://8c72fc1c007ce208a792c8310a1045.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/4af4ca4691184e3a84ef03d44d2161ca/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=8c72fc1c-007c-e208-a792-c8310a104504&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BTUSogs7O0o1WqqqXXJsDeh8aPjbQ9dp4dJ2ngSjP34";
+
+                    callHttpTriggeredFlow(payload, pushFileURL)
+                        .then(response => {
+
+                            while (fileList.firstChild) {
+                                fileList.removeChild(fileList.firstChild);
+                            }
+
+                            renderFileList(opportunityString);
+                            console.log("Flow failed: " + response);
+                        })
+                        .catch(err => {
+                            console.log("Flow failed: " + err.message);
+                        });
+                    
+                } catch (error) {
+                    console.error(error);
+                    alert(`Error uploading ${file.name}: ${error.message}`);
+                }
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+
+        async function loadNotes()
+        {
+            var formType = Xrm.Page.ui.getFormType();
+            if (formType === 1) {
+                return;
+            }
+
+            await getEnvironmentVariableValue("new_getdata")
+                .then(value => {
+                    getFileURL = value;
+                    console.log("Environment Variable Value:", value);
+                })
+                .catch(err => {
+                    console.error("Failed to fetch env variable:", err);
+                });
+
+            await getEnvironmentVariableValue("new_pushdata")
+                .then(value => {
+                    pushFileURL = value;
+                    console.log("Environment Variable Value:", value);
+                })
+                .catch(err => {
+                    console.error("Failed to fetch env variable:", err);
+                });
+
+            renderFileList(opportunityString);
+        }
+
+        function renderFileList(opportunityString) {
+
+            const payload = {
+                OpportunityName: opportunityString
+            };
+            // const flowURL = "https://8c72fc1c007ce208a792c8310a1045.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/d6d88307fd7e4a8eb4345f9b48194b25/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=8c72fc1c-007c-e208-a792-c8310a104504&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QO3C2mCKSzHQ-JrPLSdpG6-4yACJjVXisOysdx1e6Nw";
+
+            callHttpTriggeredFlow(payload, getFileURL)
+                .then(response =>
+                {
+                    var items = response.split(';');
+                    items.forEach(note => {                    
+                    const item = document.createElement("div");
+                    item.className = "file-item";
+                    item.innerHTML = `<a href="">${note}</a>`;
+                    fileList.appendChild(item);
+                });
+                    
+                })
+                .catch(err => {
+                    console.log("Flow failed: " + err.message);
+                });
+        }
+
+        async function callHttpTriggeredFlow(payload,flowUrl) {
+            try {
+                const response = await fetch(flowUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"                       
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Flow call failed: ${response.status} ${response.statusText}`);
+                }
+
+                const result = await response.text();
+                console.log("Flow response:", result);
+                return result;
+            } catch (error) {
+                console.error("Error calling flow:", error);
+                throw error;
+            }
+        }
+
+        async function getEnvironmentVariableValue(schemaName) {
+            const fetchXml = `<fetch top="1">
+                        <entity name="environmentvariabledefinition">
+                            <attribute name="defaultvalue" />
+                            <filter>
+                                <condition attribute="schemaname" operator="eq" value="${schemaName}" />
+                            </filter>
+                            <link-entity name="environmentvariablevalue" from="environmentvariabledefinitionid" to="environmentvariabledefinitionid" link-type="outer" alias="current">
+                                <attribute name="value" />
+                            </link-entity>
+                        </entity>
+                    </fetch>`;
+
+            try {
+                    const result = await Xrm.WebApi.retrieveMultipleRecords("environmentvariabledefinition", `?fetchXml=${encodeURIComponent(fetchXml)}`);
+                    if (result.entities.length === 0) {
+                        console.warn(`No environment variable found for schema name: ${schemaName}`);
+                        return null;
+                    }
+
+                    const record = result.entities[0];
+                    const currentValue = record["current.value"];
+                    const defaultValue = record["defaultvalue"];
+
+                    return currentValue || defaultValue || null;
+
+            } catch (error) {
+                console.error("Error fetching environment variable:", error.message);
+                throw error;
+            }
+        }
+
+        // Initialize list on load
+        window.onload = loadNotes;</script>
+
+
+</body></html>

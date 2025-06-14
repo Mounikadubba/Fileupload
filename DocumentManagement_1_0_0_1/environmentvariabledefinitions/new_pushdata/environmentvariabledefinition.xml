@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="new_pushdata">
+  <defaultvalue>https://8c72fc1c007ce208a792c8310a1045.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/4af4ca4691184e3a84ef03d44d2161ca/triggers/manual/paths/invoke/?api-version=1&amp;tenantId=tId&amp;environmentName=8c72fc1c-007c-e208-a792-c8310a104504&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=BTUSogs7O0o1WqqqXXJsDeh8aPjbQ9dp4dJ2ngSjP34</defaultvalue>
+  <displayname default="pushdata">
+    <label description="pushdata" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

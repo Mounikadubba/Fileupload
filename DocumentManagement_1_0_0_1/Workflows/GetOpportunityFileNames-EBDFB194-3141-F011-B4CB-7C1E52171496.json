@@ -1,0 +1,223 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsharepointonline_cf768"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "SharepointsiteURL (new_SharepointsiteURL)": {
+          "defaultValue": "https://texasuniversity245.sharepoint.com/sites/allcompany",
+          "type": "String",
+          "metadata": {
+            "schemaName": "new_SharepointsiteURL"
+          }
+        },
+        "DocumentName (new_DocumentName)": {
+          "defaultValue": "Documents",
+          "type": "String",
+          "metadata": {
+            "schemaName": "new_DocumentName"
+          }
+        },
+        "DocumentLocation (new_DocumentLocation)": {
+          "defaultValue": "/Shared Documents/Opportunities",
+          "type": "String",
+          "metadata": {
+            "schemaName": "new_DocumentLocation"
+          }
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "c34ece6d-632a-4ee3-816b-f546df7fffad"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "OpportunityName": {
+                  "type": "string"
+                }
+              }
+            },
+            "method": "POST",
+            "triggerAuthenticationType": "All"
+          }
+        }
+      },
+      "actions": {
+        "FileNameVariable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "596428bb-a423-47f1-8427-41dee67e7bbb"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "FileNames",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "Scope": {
+          "actions": {
+            "Get_files_(properties_only)": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "c9079333-989d-4b5b-a8e6-bd10940d00d0"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "GetFileItems",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@parameters('SharepointsiteURL (new_SharepointsiteURL)')",
+                  "table": "@parameters('DocumentName (new_DocumentName)')",
+                  "folderPath": "@{parameters('DocumentLocation (new_DocumentLocation)')}/@{triggerBody()?['OpportunityName']}"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('Get_files_(properties_only)')?['body/value']",
+              "actions": {
+                "FileName": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "c7c2c6c2-a025-40e3-ba28-3b3c4367c842"
+                  },
+                  "type": "Compose",
+                  "inputs": "@items('Apply_to_each')?['{FilenameWithExtension}']"
+                },
+                "Append_to_array_variable": {
+                  "runAfter": {
+                    "FileName": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "1fc46823-7a98-44c8-832c-1d712643cb76"
+                  },
+                  "type": "AppendToArrayVariable",
+                  "inputs": {
+                    "name": "FileNames",
+                    "value": "@outputs('FileName')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_files_(properties_only)": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4c24caa9-d554-4bfc-a506-e1eb5021dbc1"
+              },
+              "type": "Foreach"
+            },
+            "OpportunityFileNames": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "cb2bf13e-8924-4ab5-af67-2a2ffc40a07e"
+              },
+              "type": "Compose",
+              "inputs": "@join(variables('FileNames'), ';')"
+            },
+            "Response": {
+              "runAfter": {
+                "OpportunityFileNames": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bc47de73-d45f-49c8-8e4f-9c34bd1f631a"
+              },
+              "type": "Response",
+              "kind": "Http",
+              "inputs": {
+                "statusCode": 200,
+                "body": "@outputs('OpportunityFileNames')",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "FileNameVariable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d4d595f4-63a3-40b0-b600-d06dd11aeb2a"
+          },
+          "type": "Scope"
+        },
+        "Catch": {
+          "actions": {
+            "Response_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f8720303-1d81-4905-8110-ebafe25d8fbe"
+              },
+              "type": "Response",
+              "kind": "Http",
+              "inputs": {
+                "statusCode": 200,
+                "body": "@outputs('OpportunityFileNames')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope": [
+              "Failed",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "79b763fe-c9b9-437c-9fb1-ebcebd7bad36"
+          },
+          "type": "Scope"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

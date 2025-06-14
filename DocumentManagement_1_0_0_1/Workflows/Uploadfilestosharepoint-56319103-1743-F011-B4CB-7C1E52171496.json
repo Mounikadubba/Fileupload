@@ -1,0 +1,126 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsharepointonline_cf768"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "SharepointsiteURL (new_SharepointsiteURL)": {
+          "defaultValue": "https://texasuniversity245.sharepoint.com",
+          "type": "String",
+          "metadata": {
+            "schemaName": "new_SharepointsiteURL"
+          }
+        },
+        "DocumentLocation (new_DocumentLocation)": {
+          "defaultValue": "/Opportunity Files",
+          "type": "String",
+          "metadata": {
+            "schemaName": "new_DocumentLocation"
+          }
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "34ef541f-4fe6-4421-ae74-d6cde5997edd"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "OpportunityName": {
+                  "type": "string"
+                },
+                "FileName": {
+                  "type": "string"
+                },
+                "FileContent": {
+                  "type": "string"
+                }
+              }
+            },
+            "method": "POST",
+            "triggerAuthenticationType": "All"
+          }
+        }
+      },
+      "actions": {
+        "Scope": {
+          "actions": {
+            "Create_file": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f4438bd1-f5cd-449f-8c67-32c0c6d012eb"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "CreateFile",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@parameters('SharepointsiteURL (new_SharepointsiteURL)')",
+                  "folderPath": "@{parameters('DocumentLocation (new_DocumentLocation)')}/@{triggerBody()?['OpportunityName']}",
+                  "name": "@triggerBody()?['FileName']",
+                  "body": "@triggerBody()?['FileContent']"
+                },
+                "authentication": "@parameters('$authentication')"
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "95287710-647a-483b-9793-77d7afc33f87"
+          },
+          "type": "Scope"
+        },
+        "Response": {
+          "runAfter": {
+            "Scope": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "747fc62b-c251-4720-a0fa-99bf9fa13503"
+          },
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": "successful"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="new_getdata">
+  <defaultvalue>https://8c72fc1c007ce208a792c8310a1045.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/d6d88307fd7e4a8eb4345f9b48194b25/triggers/manual/paths/invoke/?api-version=1&amp;tenantId=tId&amp;environmentName=8c72fc1c-007c-e208-a792-c8310a104504&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=QO3C2mCKSzHQ-JrPLSdpG6-4yACJjVXisOysdx1e6Nw</defaultvalue>
+  <displayname default="getdata">
+    <label description="getdata" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

@@ -1,0 +1,3279 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25044.206" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25044.00206">
+  <Entities>
+    <Entity>
+      <Name LocalizedName="Opportunity" OriginalName="Opportunity">new_Opportunity</Name>
+      <EntityInfo>
+        <entity Name="new_Opportunity">
+          <LocalizedNames>
+            <LocalizedName description="Opportunity" languagecode="1033" />
+          </LocalizedNames>
+          <LocalizedCollectionNames>
+            <LocalizedCollectionName description="Opportunities" languagecode="1033" />
+          </LocalizedCollectionNames>
+          <Descriptions>
+            <Description description="This table contains records of opportunities." languagecode="1033" />
+          </Descriptions>
+          <attributes>
+            <attribute PhysicalName="CreatedBy">
+              <Type>lookup</Type>
+              <Name>createdby</Name>
+              <LogicalName>createdby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Created By" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="CreatedOn">
+              <Type>datetime</Type>
+              <Name>createdon</Name>
+              <LogicalName>createdon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>datetime</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Created On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time when the record was created." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="CreatedOnBehalfBy">
+              <Type>lookup</Type>
+              <Name>createdonbehalfby</Name>
+              <LogicalName>createdonbehalfby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Created By (Delegate)" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the delegate user who created the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ImportSequenceNumber">
+              <Type>int</Type>
+              <Name>importsequencenumber</Name>
+              <LogicalName>importsequencenumber</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind</DisplayMask>
+              <ImeMode>disabled</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-2147483648</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="Import Sequence Number" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Sequence number of the import that created this record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedBy">
+              <Type>lookup</Type>
+              <Name>modifiedby</Name>
+              <LogicalName>modifiedby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Modified By" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedOn">
+              <Type>datetime</Type>
+              <Name>modifiedon</Name>
+              <LogicalName>modifiedon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>datetime</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Modified On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time when the record was modified." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedOnBehalfBy">
+              <Type>lookup</Type>
+              <Name>modifiedonbehalfby</Name>
+              <LogicalName>modifiedonbehalfby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Modified By (Delegate)" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_OpportunityId">
+              <Type>primarykey</Type>
+              <Name>new_opportunityid</Name>
+              <LogicalName>new_opportunityid</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>0</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <displaynames>
+                <displayname description="Opportunity" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for entity instances" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_OpportunityName">
+              <Type>nvarchar</Type>
+              <Name>new_opportunityname</Name>
+              <LogicalName>new_opportunityname</LogicalName>
+              <RequiredLevel>required</RequiredLevel>
+              <DisplayMask>PrimaryName|ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>1</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>text</Format>
+              <MaxLength>850</MaxLength>
+              <Length>1700</Length>
+              <displaynames>
+                <displayname description="Opportunity Name" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_Status">
+              <Type>picklist</Type>
+              <Name>new_status</Name>
+              <LogicalName>new_status</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0.0.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <AppDefaultValue>100000000</AppDefaultValue>
+              <optionset Name="new_opportunity_new_status">
+                <OptionSetType>picklist</OptionSetType>
+                <IntroducedVersion>1.0.0.0</IntroducedVersion>
+                <IsCustomizable>1</IsCustomizable>
+                <displaynames>
+                  <displayname description="Status" languagecode="1033" />
+                </displaynames>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+                <options>
+                  <option value="100000000" ExternalValue="" IsHidden="0">
+                    <labels>
+                      <label description="Open" languagecode="1033" />
+                    </labels>
+                  </option>
+                  <option value="100000001" ExternalValue="" IsHidden="0">
+                    <labels>
+                      <label description="Closed" languagecode="1033" />
+                    </labels>
+                  </option>
+                  <option value="100000002" ExternalValue="" IsHidden="0">
+                    <labels>
+                      <label description="Pending" languagecode="1033" />
+                    </labels>
+                  </option>
+                </options>
+              </optionset>
+              <displaynames>
+                <displayname description="Status" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OverriddenCreatedOn">
+              <Type>datetime</Type>
+              <Name>overriddencreatedon</Name>
+              <LogicalName>overriddencreatedon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>date</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Record Created On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time that the record was migrated." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwnerId">
+              <Type>owner</Type>
+              <Name>ownerid</Name>
+              <LogicalName>ownerid</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes>
+                <LookupType id="00000000-0000-0000-0000-000000000000">8</LookupType>
+                <LookupType id="00000000-0000-0000-0000-000000000000">9</LookupType>
+              </LookupTypes>
+              <displaynames>
+                <displayname description="Owner" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Owner Id" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningBusinessUnit">
+              <Type>lookup</Type>
+              <Name>owningbusinessunit</Name>
+              <LogicalName>owningbusinessunit</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning Business Unit" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningTeam">
+              <Type>lookup</Type>
+              <Name>owningteam</Name>
+              <LogicalName>owningteam</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsLogical>1</IsLogical>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning Team" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningUser">
+              <Type>lookup</Type>
+              <Name>owninguser</Name>
+              <LogicalName>owninguser</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsLogical>1</IsLogical>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning User" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="statecode">
+              <Type>state</Type>
+              <Name>statecode</Name>
+              <LogicalName>statecode</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <optionset Name="new_opportunity_statecode">
+                <OptionSetType>state</OptionSetType>
+                <IntroducedVersion>1.0</IntroducedVersion>
+                <IsCustomizable>1</IsCustomizable>
+                <displaynames>
+                  <displayname description="Status" languagecode="1033" />
+                </displaynames>
+                <Descriptions>
+                  <Description description="Status of the Opportunity" languagecode="1033" />
+                </Descriptions>
+                <states>
+                  <state value="0" defaultstatus="1" invariantname="Active">
+                    <labels>
+                      <label description="Active" languagecode="1033" />
+                    </labels>
+                  </state>
+                  <state value="1" defaultstatus="2" invariantname="Inactive">
+                    <labels>
+                      <label description="Inactive" languagecode="1033" />
+                    </labels>
+                  </state>
+                </states>
+              </optionset>
+              <displaynames>
+                <displayname description="Status" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Status of the Opportunity" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="statuscode">
+              <Type>status</Type>
+              <Name>statuscode</Name>
+              <LogicalName>statuscode</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <optionset Name="new_opportunity_statuscode">
+                <OptionSetType>status</OptionSetType>
+                <IntroducedVersion>1.0</IntroducedVersion>
+                <IsCustomizable>1</IsCustomizable>
+                <displaynames>
+                  <displayname description="Status Reason" languagecode="1033" />
+                </displaynames>
+                <Descriptions>
+                  <Description description="Reason for the status of the Opportunity" languagecode="1033" />
+                </Descriptions>
+                <statuses>
+                  <status value="1" state="0">
+                    <labels>
+                      <label description="Active" languagecode="1033" />
+                    </labels>
+                  </status>
+                  <status value="2" state="1">
+                    <labels>
+                      <label description="Inactive" languagecode="1033" />
+                    </labels>
+                  </status>
+                </statuses>
+              </optionset>
+              <displaynames>
+                <displayname description="Status Reason" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Reason for the status of the Opportunity" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="TimeZoneRuleVersionNumber">
+              <Type>int</Type>
+              <Name>timezoneruleversionnumber</Name>
+              <LogicalName>timezoneruleversionnumber</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-1</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="Time Zone Rule Version Number" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="For internal use only." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="UTCConversionTimeZoneCode">
+              <Type>int</Type>
+              <Name>utcconversiontimezonecode</Name>
+              <LogicalName>utcconversiontimezonecode</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-1</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="UTC Conversion Time Zone Code" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Time zone code that was in use when the record was created." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+          </attributes>
+          <EntitySetName>new_opportunities</EntitySetName>
+          <IsDuplicateCheckSupported>0</IsDuplicateCheckSupported>
+          <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
+          <IsRequiredOffline>0</IsRequiredOffline>
+          <IsInteractionCentricEnabled>0</IsInteractionCentricEnabled>
+          <IsCollaboration>0</IsCollaboration>
+          <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+          <IsConnectionsEnabled>0</IsConnectionsEnabled>
+          <IsDocumentManagementEnabled>0</IsDocumentManagementEnabled>
+          <AutoCreateAccessTeams>0</AutoCreateAccessTeams>
+          <IsOneNoteIntegrationEnabled>0</IsOneNoteIntegrationEnabled>
+          <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+          <IsSLAEnabled>0</IsSLAEnabled>
+          <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+          <IsBPFEntity>0</IsBPFEntity>
+          <OwnershipTypeMask>UserOwned</OwnershipTypeMask>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsRetrieveAuditEnabled>0</IsRetrieveAuditEnabled>
+          <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+          <IsActivity>0</IsActivity>
+          <ActivityTypeMask></ActivityTypeMask>
+          <IsActivityParty>0</IsActivityParty>
+          <IsReplicated>0</IsReplicated>
+          <IsReplicationUserFiltered>0</IsReplicationUserFiltered>
+          <IsMailMergeEnabled>0</IsMailMergeEnabled>
+          <IsVisibleInMobile>0</IsVisibleInMobile>
+          <IsVisibleInMobileClient>0</IsVisibleInMobileClient>
+          <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+          <IsOfflineInMobileClient>0</IsOfflineInMobileClient>
+          <DaysSinceRecordLastModified>0</DaysSinceRecordLastModified>
+          <MobileOfflineFilters></MobileOfflineFilters>
+          <IsMapiGridEnabled>1</IsMapiGridEnabled>
+          <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+          <IsQuickCreateEnabled>0</IsQuickCreateEnabled>
+          <SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <IsMappable>1</IsMappable>
+          <CanModifyAuditSettings>1</CanModifyAuditSettings>
+          <CanModifyMobileVisibility>1</CanModifyMobileVisibility>
+          <CanModifyMobileClientVisibility>1</CanModifyMobileClientVisibility>
+          <CanModifyMobileClientReadOnly>1</CanModifyMobileClientReadOnly>
+          <CanModifyMobileClientOffline>1</CanModifyMobileClientOffline>
+          <CanModifyConnectionSettings>1</CanModifyConnectionSettings>
+          <CanModifyDuplicateDetectionSettings>1</CanModifyDuplicateDetectionSettings>
+          <CanModifyMailMergeSettings>1</CanModifyMailMergeSettings>
+          <CanModifyQueueSettings>1</CanModifyQueueSettings>
+          <CanCreateAttributes>1</CanCreateAttributes>
+          <CanCreateForms>1</CanCreateForms>
+          <CanCreateCharts>1</CanCreateCharts>
+          <CanCreateViews>1</CanCreateViews>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <CanEnableSyncToExternalSearchIndex>1</CanEnableSyncToExternalSearchIndex>
+          <EnforceStateTransitions>0</EnforceStateTransitions>
+          <CanChangeHierarchicalRelationship>1</CanChangeHierarchicalRelationship>
+          <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+          <ChangeTrackingEnabled>0</ChangeTrackingEnabled>
+          <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
+          <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+          <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+          <IsSolutionAware>0</IsSolutionAware>
+          <HasRelatedNotes>True</HasRelatedNotes>
+        </entity>
+      </EntityInfo>
+      <FormXml>
+        <forms type="card">
+          <systemform>
+            <formid>{8b59dbf7-38fa-404e-b24d-64a027b23754}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab name="general" verticallayout="true" id="{270cab0b-f811-4d92-8536-8c488cf93102}" IsUserDefined="0">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="25%">
+                      <sections>
+                        <section name="ColorStrip" showlabel="false" showbar="false" columns="1" IsUserDefined="0" id="{7b55d7f7-9fd8-4920-b0bb-8a6e6b58f5fd}">
+                          <labels>
+                            <label description="ColorStrip" languagecode="1033" />
+                          </labels>
+                        </section>
+                      </sections>
+                    </column>
+                    <column width="75%">
+                      <sections>
+                        <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{f8c915c8-4dcd-4c35-9d6d-923e8fdd6ca2}" IsUserDefined="0">
+                          <labels>
+                            <label description="Header" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{349e8504-56b1-4ded-a149-d2e17a7c0cfc}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Status Reason" languagecode="1033" />
+                                </labels>
+                                <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                              </cell>
+                              <cell id="{a47da4b3-4945-4bc6-8925-ba180a171234}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                              <cell id="{ffcbb340-4aed-4bd4-827d-c06746696237}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                        <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{1f30e44c-a80e-4117-924a-51d3a0616c30}" IsUserDefined="0">
+                          <labels>
+                            <label description="Details" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{326ac3f2-902b-4ebf-835c-a7f0746d5cea}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Opportunity Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_opportunityname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_opportunityname" disabled="false" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                        <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{b8221d5a-227d-45c8-a7e5-45ccd2ae206a}" IsUserDefined="0">
+                          <labels>
+                            <label description="Footer" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{40b453b1-9e55-46c6-9638-64c9684555b1}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                              </cell>
+                              <cell id="{52760586-5f3b-425f-9926-fc84b66b8f07}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Created On" languagecode="1033" />
+                                </labels>
+                                <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
+                              </cell>
+                              <cell id="{a9c7e0a7-072d-49f1-813c-67c3d566d7d8}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                              <cell id="{47e3514c-5106-4507-a744-a136601e1fd5}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="A card form for this entity." languagecode="1033" />
+            </Descriptions>
+          </systemform>
+        </forms>
+        <forms type="main">
+          <systemform>
+            <formid>{dfebe390-0bac-46ea-9ad5-0c41fe96c931}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab verticallayout="true" id="{e73ae7e7-cb91-4e12-822c-661b49e8b007}" IsUserDefined="1">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{7e75b566-9458-45c3-ab01-61abe9ffcb41}">
+                          <labels>
+                            <label description="General" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{5a13b679-11e8-4b36-ad80-a84f48a4a6a5}">
+                                <labels>
+                                  <label description="Opportunity Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_opportunityname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_opportunityname" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{108ffdeb-bf8a-4a6d-a972-882225171605}">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{e27cdd9d-4d75-4bc1-8ed5-d1cb81fe4bc9}">
+                                <labels>
+                                  <label description="Status" languagecode="1033" />
+                                </labels>
+                                <control id="new_status" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_status" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+                <tab name="DocumentManagement" id="{47078b81-8208-cdda-3836-3d8ebadc511e}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+                  <labels>
+                    <label description="Document Management" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section name="tab_2_section_1" showlabel="false" showbar="false" locklevel="0" id="{bbd5d00e-c874-8bbd-baa3-c62a03bb1566}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                          <labels>
+                            <label description="Section" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{2e320b05-9d13-1baa-d769-2db5a07c087a}" showlabel="false" colspan="1" auto="false" rowspan="20">
+                                <labels>
+                                  <label description="DocumentManagement" languagecode="1033" />
+                                </labels>
+                                <control id="WebResource_documentmanagement" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                  <parameters>
+                                    <Url>new_documentmanagement</Url>
+                                    <PassParameters>true</PassParameters>
+                                    <ShowOnMobileClient>false</ShowOnMobileClient>
+                                    <Security>false</Security>
+                                    <Scrolling>auto</Scrolling>
+                                    <Border>true</Border>
+                                    <WebResourceId>{8CF8C419-0643-F011-B4CB-7C1E52171496}</WebResourceId>
+                                  </parameters>
+                                </control>
+                                <events>
+                                  <event name="onload" application="false">
+                                    <dependencies />
+                                  </event>
+                                </events>
+                              </cell>
+                            </row>
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                            <row />
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+              <Navigation>
+                <NavBar></NavBar>
+                <NavBarAreas>
+                  <NavBarArea Id="Info">
+                    <Titles>
+                      <Title LCID="1033" Text="Common" />
+                    </Titles>
+                  </NavBarArea>
+                  <NavBarArea Id="Sales">
+                    <Titles>
+                      <Title LCID="1033" Text="Sales" />
+                    </Titles>
+                  </NavBarArea>
+                  <NavBarArea Id="Service">
+                    <Titles>
+                      <Title LCID="1033" Text="Service" />
+                    </Titles>
+                  </NavBarArea>
+                  <NavBarArea Id="Marketing">
+                    <Titles>
+                      <Title LCID="1033" Text="Marketing" />
+                    </Titles>
+                  </NavBarArea>
+                  <NavBarArea Id="ProcessCenter">
+                    <Titles>
+                      <Title LCID="1033" Text="Process Sessions" />
+                    </Titles>
+                  </NavBarArea>
+                </NavBarAreas>
+              </Navigation>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="A form for this entity." languagecode="1033" />
+            </Descriptions>
+          </systemform>
+        </forms>
+        <forms type="quick">
+          <systemform>
+            <formid>{2e0ae5e0-16f4-430b-81b5-ed35908f9861}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab verticallayout="true" id="{38b6842c-f6fe-4075-93cd-6509b5740b51}" IsUserDefined="1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{3a3c2fa9-d337-4984-b9f3-7b3b09857259}">
+                          <labels>
+                            <label description="GENERAL" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{e9c4d632-2e60-4020-9ba7-252d4adf2d3c}">
+                                <labels>
+                                  <label description="Opportunity Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_opportunityname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_opportunityname" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{bea96aac-bbbd-4d23-9e9c-2804545b6877}">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+          </systemform>
+        </forms>
+      </FormXml>
+      <SavedQueries>
+        <savedqueries>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{806454bd-d2dc-426c-b28a-529c313330a0}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_opportunityname" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="new_status" width="150" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>0</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <order attribute="new_opportunityname" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                  <attribute name="new_status" />
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Active Opportunities" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>0</isdefault>
+            <savedqueryid>{65271dcf-33f8-4440-8297-1c43739685d0}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_opportunityname" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>0</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <order attribute="new_opportunityname" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="1" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Inactive Opportunities" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{25f5d84b-c53f-f011-b4cd-7c1e521436f2}</savedqueryid>
+            <querytype>8192</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical" output-format="xml-platform">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                    <condition attribute="ownerid" operator="eq-userid" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="My Opportunities" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="Active Opportunities owned by me" languagecode="1033" />
+            </Descriptions>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{88e7ff1a-eea7-4504-bf97-8361b4cb1034}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_opportunityname" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>1</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <order attribute="new_opportunityname" descending="false" />
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity Advanced Find View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{e8fd5f6c-3724-4746-b2a0-35be251a37f1}</savedqueryid>
+            <layoutxml>
+              <grid name="new_opportunities" jump="new_opportunityname" select="1" icon="1" preview="1">
+                <row name="new_opportunity" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>2</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <order attribute="new_opportunityname" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity Associated View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{be8c6b44-f7d1-492b-abbc-0af94743e3d7}</savedqueryid>
+            <layoutxml>
+              <grid name="new_opportunities" jump="new_opportunityname" select="1" icon="1" preview="0">
+                <row name="new_opportunity" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>64</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity Lookup View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>1</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{a6475be9-2103-49d1-a1a6-238b2ae53e33}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_opportunityname" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityid">
+                  <cell name="new_opportunityname" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>4</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunity">
+                  <attribute name="new_opportunityid" />
+                  <attribute name="new_opportunityname" />
+                  <attribute name="createdon" />
+                  <order attribute="new_opportunityname" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                  <filter type="or" isquickfindfields="1">
+                    <condition attribute="new_opportunityname" operator="like" value="{0}" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Quick Find Active Opportunities" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+        </savedqueries>
+      </SavedQueries>
+      <RibbonDiffXml>
+        <CustomActions />
+        <Templates>
+          <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+        </Templates>
+        <CommandDefinitions />
+        <RuleDefinitions>
+          <TabDisplayRules />
+          <DisplayRules />
+          <EnableRules />
+        </RuleDefinitions>
+        <LocLabels />
+      </RibbonDiffXml>
+    </Entity>
+    <Entity>
+      <Name LocalizedName="Opportunity File Reference" OriginalName="Opportunity File Reference">new_OpportunityFileReference</Name>
+      <EntityInfo>
+        <entity Name="new_OpportunityFileReference">
+          <LocalizedNames>
+            <LocalizedName description="Opportunity File Reference" languagecode="1033" />
+          </LocalizedNames>
+          <LocalizedCollectionNames>
+            <LocalizedCollectionName description="Opportunity File References" languagecode="1033" />
+          </LocalizedCollectionNames>
+          <Descriptions>
+            <Description description="This table contains records of opportunity file references." languagecode="1033" />
+          </Descriptions>
+          <attributes>
+            <attribute PhysicalName="CreatedBy">
+              <Type>lookup</Type>
+              <Name>createdby</Name>
+              <LogicalName>createdby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Created By" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="CreatedOn">
+              <Type>datetime</Type>
+              <Name>createdon</Name>
+              <LogicalName>createdon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>datetime</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Created On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time when the record was created." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="CreatedOnBehalfBy">
+              <Type>lookup</Type>
+              <Name>createdonbehalfby</Name>
+              <LogicalName>createdonbehalfby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Created By (Delegate)" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the delegate user who created the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ImportSequenceNumber">
+              <Type>int</Type>
+              <Name>importsequencenumber</Name>
+              <LogicalName>importsequencenumber</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind</DisplayMask>
+              <ImeMode>disabled</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-2147483648</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="Import Sequence Number" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Sequence number of the import that created this record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedBy">
+              <Type>lookup</Type>
+              <Name>modifiedby</Name>
+              <LogicalName>modifiedby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Modified By" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedOn">
+              <Type>datetime</Type>
+              <Name>modifiedon</Name>
+              <LogicalName>modifiedon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>datetime</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Modified On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time when the record was modified." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="ModifiedOnBehalfBy">
+              <Type>lookup</Type>
+              <Name>modifiedonbehalfby</Name>
+              <LogicalName>modifiedonbehalfby</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Modified By (Delegate)" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_FileName">
+              <Type>nvarchar</Type>
+              <Name>new_filename</Name>
+              <LogicalName>new_filename</LogicalName>
+              <RequiredLevel>required</RequiredLevel>
+              <DisplayMask>PrimaryName|ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>1</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>text</Format>
+              <MaxLength>850</MaxLength>
+              <Length>1700</Length>
+              <displaynames>
+                <displayname description="File Name" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_OpportunityFileReferenceId">
+              <Type>primarykey</Type>
+              <Name>new_opportunityfilereferenceid</Name>
+              <LogicalName>new_opportunityfilereferenceid</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>0</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>1</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <displaynames>
+                <displayname description="Opportunity File Reference" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for entity instances" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_OpportunityID">
+              <Type>lookup</Type>
+              <Name>new_opportunityid</Name>
+              <LogicalName>new_opportunityid</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0.0.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Opportunity" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="new_UploadDate">
+              <Type>datetime</Type>
+              <Name>new_uploaddate</Name>
+              <LogicalName>new_uploaddate</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>1</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0.0.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>date</Format>
+              <CanChangeDateTimeBehavior>1</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Upload Date" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OverriddenCreatedOn">
+              <Type>datetime</Type>
+              <Name>overriddencreatedon</Name>
+              <LogicalName>overriddencreatedon</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForGrid</DisplayMask>
+              <ImeMode>inactive</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format>date</Format>
+              <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+              <Behavior>1</Behavior>
+              <displaynames>
+                <displayname description="Record Created On" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Date and time that the record was migrated." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwnerId">
+              <Type>owner</Type>
+              <Name>ownerid</Name>
+              <LogicalName>ownerid</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes>
+                <LookupType id="00000000-0000-0000-0000-000000000000">8</LookupType>
+                <LookupType id="00000000-0000-0000-0000-000000000000">9</LookupType>
+              </LookupTypes>
+              <displaynames>
+                <displayname description="Owner" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Owner Id" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningBusinessUnit">
+              <Type>lookup</Type>
+              <Name>owningbusinessunit</Name>
+              <LogicalName>owningbusinessunit</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning Business Unit" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningTeam">
+              <Type>lookup</Type>
+              <Name>owningteam</Name>
+              <LogicalName>owningteam</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsLogical>1</IsLogical>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning Team" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="OwningUser">
+              <Type>lookup</Type>
+              <Name>owninguser</Name>
+              <LogicalName>owninguser</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>0</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsLogical>1</IsLogical>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <LookupStyle>single</LookupStyle>
+              <LookupTypes />
+              <displaynames>
+                <displayname description="Owning User" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="statecode">
+              <Type>state</Type>
+              <Name>statecode</Name>
+              <LogicalName>statecode</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>0</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>1</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <optionset Name="new_opportunityfilereference_statecode">
+                <OptionSetType>state</OptionSetType>
+                <IntroducedVersion>1.0</IntroducedVersion>
+                <IsCustomizable>1</IsCustomizable>
+                <displaynames>
+                  <displayname description="Status" languagecode="1033" />
+                </displaynames>
+                <Descriptions>
+                  <Description description="Status of the Opportunity File Reference" languagecode="1033" />
+                </Descriptions>
+                <states>
+                  <state value="0" defaultstatus="1" invariantname="Active">
+                    <labels>
+                      <label description="Active" languagecode="1033" />
+                    </labels>
+                  </state>
+                  <state value="1" defaultstatus="2" invariantname="Inactive">
+                    <labels>
+                      <label description="Inactive" languagecode="1033" />
+                    </labels>
+                  </state>
+                </states>
+              </optionset>
+              <displaynames>
+                <displayname description="Status" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Status of the Opportunity File Reference" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="statuscode">
+              <Type>status</Type>
+              <Name>statuscode</Name>
+              <LogicalName>statuscode</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>1</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <optionset Name="new_opportunityfilereference_statuscode">
+                <OptionSetType>status</OptionSetType>
+                <IntroducedVersion>1.0</IntroducedVersion>
+                <IsCustomizable>1</IsCustomizable>
+                <displaynames>
+                  <displayname description="Status Reason" languagecode="1033" />
+                </displaynames>
+                <Descriptions>
+                  <Description description="Reason for the status of the Opportunity File Reference" languagecode="1033" />
+                </Descriptions>
+                <statuses>
+                  <status value="1" state="0">
+                    <labels>
+                      <label description="Active" languagecode="1033" />
+                    </labels>
+                  </status>
+                  <status value="2" state="1">
+                    <labels>
+                      <label description="Inactive" languagecode="1033" />
+                    </labels>
+                  </status>
+                </statuses>
+              </optionset>
+              <displaynames>
+                <displayname description="Status Reason" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Reason for the status of the Opportunity File Reference" languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="TimeZoneRuleVersionNumber">
+              <Type>int</Type>
+              <Name>timezoneruleversionnumber</Name>
+              <LogicalName>timezoneruleversionnumber</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-1</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="Time Zone Rule Version Number" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="For internal use only." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+            <attribute PhysicalName="UTCConversionTimeZoneCode">
+              <Type>int</Type>
+              <Name>utcconversiontimezonecode</Name>
+              <LogicalName>utcconversiontimezonecode</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <ImeMode>auto</ImeMode>
+              <ValidForUpdateApi>1</ValidForUpdateApi>
+              <ValidForReadApi>1</ValidForReadApi>
+              <ValidForCreateApi>1</ValidForCreateApi>
+              <IsCustomField>0</IsCustomField>
+              <IsAuditEnabled>0</IsAuditEnabled>
+              <IsSecured>0</IsSecured>
+              <IntroducedVersion>1.0</IntroducedVersion>
+              <IsCustomizable>1</IsCustomizable>
+              <IsRenameable>1</IsRenameable>
+              <CanModifySearchSettings>1</CanModifySearchSettings>
+              <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+              <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+              <SourceType>0</SourceType>
+              <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+              <IsSortableEnabled>0</IsSortableEnabled>
+              <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+              <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+              <IsDataSourceSecret>0</IsDataSourceSecret>
+              <AutoNumberFormat></AutoNumberFormat>
+              <IsSearchable>0</IsSearchable>
+              <IsFilterable>0</IsFilterable>
+              <IsRetrievable>0</IsRetrievable>
+              <IsLocalizable>0</IsLocalizable>
+              <Format></Format>
+              <MinValue>-1</MinValue>
+              <MaxValue>2147483647</MaxValue>
+              <displaynames>
+                <displayname description="UTC Conversion Time Zone Code" languagecode="1033" />
+              </displaynames>
+              <Descriptions>
+                <Description description="Time zone code that was in use when the record was created." languagecode="1033" />
+              </Descriptions>
+            </attribute>
+          </attributes>
+          <EntitySetName>new_opportunityfilereferences</EntitySetName>
+          <IsDuplicateCheckSupported>0</IsDuplicateCheckSupported>
+          <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
+          <IsRequiredOffline>0</IsRequiredOffline>
+          <IsInteractionCentricEnabled>0</IsInteractionCentricEnabled>
+          <IsCollaboration>0</IsCollaboration>
+          <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+          <IsConnectionsEnabled>0</IsConnectionsEnabled>
+          <IsDocumentManagementEnabled>0</IsDocumentManagementEnabled>
+          <AutoCreateAccessTeams>0</AutoCreateAccessTeams>
+          <IsOneNoteIntegrationEnabled>0</IsOneNoteIntegrationEnabled>
+          <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+          <IsSLAEnabled>0</IsSLAEnabled>
+          <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+          <IsBPFEntity>0</IsBPFEntity>
+          <OwnershipTypeMask>UserOwned</OwnershipTypeMask>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsRetrieveAuditEnabled>0</IsRetrieveAuditEnabled>
+          <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+          <IsActivity>0</IsActivity>
+          <ActivityTypeMask></ActivityTypeMask>
+          <IsActivityParty>0</IsActivityParty>
+          <IsReplicated>0</IsReplicated>
+          <IsReplicationUserFiltered>0</IsReplicationUserFiltered>
+          <IsMailMergeEnabled>0</IsMailMergeEnabled>
+          <IsVisibleInMobile>0</IsVisibleInMobile>
+          <IsVisibleInMobileClient>0</IsVisibleInMobileClient>
+          <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+          <IsOfflineInMobileClient>0</IsOfflineInMobileClient>
+          <DaysSinceRecordLastModified>0</DaysSinceRecordLastModified>
+          <MobileOfflineFilters></MobileOfflineFilters>
+          <IsMapiGridEnabled>1</IsMapiGridEnabled>
+          <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+          <IsQuickCreateEnabled>0</IsQuickCreateEnabled>
+          <SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <IsMappable>1</IsMappable>
+          <CanModifyAuditSettings>1</CanModifyAuditSettings>
+          <CanModifyMobileVisibility>1</CanModifyMobileVisibility>
+          <CanModifyMobileClientVisibility>1</CanModifyMobileClientVisibility>
+          <CanModifyMobileClientReadOnly>1</CanModifyMobileClientReadOnly>
+          <CanModifyMobileClientOffline>1</CanModifyMobileClientOffline>
+          <CanModifyConnectionSettings>1</CanModifyConnectionSettings>
+          <CanModifyDuplicateDetectionSettings>1</CanModifyDuplicateDetectionSettings>
+          <CanModifyMailMergeSettings>1</CanModifyMailMergeSettings>
+          <CanModifyQueueSettings>1</CanModifyQueueSettings>
+          <CanCreateAttributes>1</CanCreateAttributes>
+          <CanCreateForms>1</CanCreateForms>
+          <CanCreateCharts>1</CanCreateCharts>
+          <CanCreateViews>1</CanCreateViews>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <CanEnableSyncToExternalSearchIndex>1</CanEnableSyncToExternalSearchIndex>
+          <EnforceStateTransitions>0</EnforceStateTransitions>
+          <CanChangeHierarchicalRelationship>1</CanChangeHierarchicalRelationship>
+          <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+          <ChangeTrackingEnabled>0</ChangeTrackingEnabled>
+          <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
+          <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+          <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+          <IsSolutionAware>0</IsSolutionAware>
+          <HasRelatedNotes>True</HasRelatedNotes>
+        </entity>
+      </EntityInfo>
+      <FormXml>
+        <forms type="card">
+          <systemform>
+            <formid>{48bf7c68-acb9-4442-a930-f9e7e064f5d1}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab name="general" verticallayout="true" id="{5733d568-5a9d-458a-9622-b7c7dedf2c54}" IsUserDefined="0">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="25%">
+                      <sections>
+                        <section name="ColorStrip" showlabel="false" showbar="false" columns="1" IsUserDefined="0" id="{46e1bbd8-1e23-4abc-b3ec-f6e0f3beb3e4}">
+                          <labels>
+                            <label description="ColorStrip" languagecode="1033" />
+                          </labels>
+                        </section>
+                      </sections>
+                    </column>
+                    <column width="75%">
+                      <sections>
+                        <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{f1504d4b-ca53-45a1-a317-8658f7649487}" IsUserDefined="0">
+                          <labels>
+                            <label description="Header" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{d18873b0-4d69-4f84-8a3c-f4cbe16a005c}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Status Reason" languagecode="1033" />
+                                </labels>
+                                <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                              </cell>
+                              <cell id="{30486325-584f-4a45-8fd6-a9d48ff22249}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                              <cell id="{77c1d140-50c3-4a01-ac99-c4ce425ce152}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                        <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{ff230068-cc56-4cdf-b125-33d457691bd9}" IsUserDefined="0">
+                          <labels>
+                            <label description="Details" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{7ba4a0b4-ba99-4a3c-94cf-740e56b168dd}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="File Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_filename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_filename" disabled="false" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                        <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{d0370168-4544-4a81-acad-4361cb67a322}" IsUserDefined="0">
+                          <labels>
+                            <label description="Footer" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{d7934a71-121d-4de2-a7e6-eeb5fd7dd2ad}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                              </cell>
+                              <cell id="{b38dbccd-8215-493f-bb88-4d6766ae21cd}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Created On" languagecode="1033" />
+                                </labels>
+                                <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
+                              </cell>
+                              <cell id="{e781d657-6d39-46bc-8c04-60977343eec6}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                              <cell id="{23c0a311-61b8-4d73-abfc-1efffa483bd9}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="" languagecode="1033" />
+                                </labels>
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="A card form for this entity." languagecode="1033" />
+            </Descriptions>
+          </systemform>
+        </forms>
+        <forms type="main">
+          <systemform>
+            <formid>{e2c1bd27-48fc-401e-bf87-458d4ee19f4c}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab verticallayout="true" id="{f8e227da-2c82-4f5d-8230-71e9c5c302be}" IsUserDefined="1">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{f57ab53a-7e2e-4960-9f1b-63fc9c63342c}">
+                          <labels>
+                            <label description="General" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{b6c85394-0553-4ce1-8bc6-5b6e12c10f49}">
+                                <labels>
+                                  <label description="File Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_filename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_filename" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{3a98bb41-42d1-47fb-bc0a-8257c1783a68}">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{27909974-0293-45c9-bc8b-e74c3338647d}">
+                                <labels>
+                                  <label description="Upload Date" languagecode="1033" />
+                                </labels>
+                                <control id="new_uploaddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="new_uploaddate" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{393b7e81-4316-4ce8-a09b-5a72cfa6976d}">
+                                <labels>
+                                  <label description="Opportunity" languagecode="1033" />
+                                </labels>
+                                <control id="new_opportunityid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="new_opportunityid" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="A form for this entity." languagecode="1033" />
+            </Descriptions>
+          </systemform>
+        </forms>
+        <forms type="quick">
+          <systemform>
+            <formid>{179bc866-35c1-4f30-a7ab-bed58fd5613e}</formid>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+                <tab verticallayout="true" id="{ea0ce393-7b29-4706-9ca0-dbd2ddfeae39}" IsUserDefined="1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{3c57f6a7-b2a5-43f3-8a66-2712293e027f}">
+                          <labels>
+                            <label description="GENERAL" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{6cd46c13-a5f2-4576-8f02-6308dcb0ec24}">
+                                <labels>
+                                  <label description="File Name" languagecode="1033" />
+                                </labels>
+                                <control id="new_filename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_filename" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{176086d4-6daa-4a4e-ac66-a2aee0827815}">
+                                <labels>
+                                  <label description="Owner" languagecode="1033" />
+                                </labels>
+                                <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="Information" languagecode="1033" />
+            </LocalizedNames>
+          </systemform>
+        </forms>
+      </FormXml>
+      <SavedQueries>
+        <savedqueries>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{1c2ce0e9-d13c-4790-9a0d-9076187cffd2}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_filename" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="new_uploaddate" width="150" />
+                  <cell name="new_opportunityid" width="150" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>0</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <order attribute="new_filename" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                  <attribute name="new_uploaddate" />
+                  <attribute name="new_opportunityid" />
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Active Opportunity File References" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>0</isdefault>
+            <savedqueryid>{1c47259f-3ddf-4c91-a6e9-ee64fdf194ea}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_filename" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>0</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <order attribute="new_filename" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="1" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Inactive Opportunity File References" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{b55acf40-c53f-f011-b4cd-7c1e521436f2}</savedqueryid>
+            <querytype>8192</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical" output-format="xml-platform">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                    <condition attribute="ownerid" operator="eq-userid" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="My Opportunity File References" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="Active Opportunity File References owned by me" languagecode="1033" />
+            </Descriptions>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{5512ee1f-8527-4a90-8d38-3e49a33e54da}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_filename" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>1</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <order attribute="new_filename" descending="false" />
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity File Reference Advanced Find View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{6794a4f5-1b9f-4b7e-abe1-ca795e8f482b}</savedqueryid>
+            <layoutxml>
+              <grid name="new_opportunityfilereferences" jump="new_filename" select="1" icon="1" preview="1">
+                <row name="new_opportunityfilereference" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>2</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <order attribute="new_filename" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity File Reference Associated View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>0</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{c5ff88e8-b86b-4882-a675-aa6eaeab8408}</savedqueryid>
+            <layoutxml>
+              <grid name="new_opportunityfilereferences" jump="new_filename" select="1" icon="1" preview="0">
+                <row name="new_opportunityfilereference" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>64</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Opportunity File Reference Lookup View" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+          <savedquery>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>0</CanBeDeleted>
+            <isquickfindquery>1</isquickfindquery>
+            <isprivate>0</isprivate>
+            <isdefault>1</isdefault>
+            <savedqueryid>{d734f343-c8f3-4173-b58d-746ce2407084}</savedqueryid>
+            <layoutxml>
+              <grid name="resultset" jump="new_filename" select="1" icon="1" preview="1">
+                <row name="result" id="new_opportunityfilereferenceid">
+                  <cell name="new_filename" width="300" />
+                  <cell name="createdon" width="125" />
+                </row>
+              </grid>
+            </layoutxml>
+            <querytype>4</querytype>
+            <fetchxml>
+              <fetch version="1.0" mapping="logical">
+                <entity name="new_opportunityfilereference">
+                  <attribute name="new_opportunityfilereferenceid" />
+                  <attribute name="new_filename" />
+                  <attribute name="createdon" />
+                  <order attribute="new_filename" descending="false" />
+                  <filter type="and">
+                    <condition attribute="statecode" operator="eq" value="0" />
+                  </filter>
+                  <filter type="or" isquickfindfields="1">
+                    <condition attribute="new_filename" operator="like" value="{0}" />
+                  </filter>
+                </entity>
+              </fetch>
+            </fetchxml>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <LocalizedNames>
+              <LocalizedName description="Quick Find Active Opportunity File References" languagecode="1033" />
+            </LocalizedNames>
+          </savedquery>
+        </savedqueries>
+      </SavedQueries>
+      <RibbonDiffXml>
+        <CustomActions />
+        <Templates>
+          <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+        </Templates>
+        <CommandDefinitions />
+        <RuleDefinitions>
+          <TabDisplayRules />
+          <DisplayRules />
+          <EnableRules />
+        </RuleDefinitions>
+        <LocLabels />
+      </RibbonDiffXml>
+    </Entity>
+  </Entities>
+  <Roles></Roles>
+  <Workflows>
+    <Workflow WorkflowId="{ebdfb194-3141-f011-b4cb-7c1e52171496}" Name="GetOpportunityFileNames">
+      <JsonFileName>/Workflows/GetOpportunityFileNames-EBDFB194-3141-F011-B4CB-7C1E52171496.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <ModernFlowType>0</ModernFlowType>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="GetOpportunityFileNames" />
+      </LocalizedNames>
+    </Workflow>
+    <Workflow WorkflowId="{56319103-1743-f011-b4cb-7c1e52171496}" Name="Upload files to sharepoint">
+      <JsonFileName>/Workflows/Uploadfilestosharepoint-56319103-1743-F011-B4CB-7C1E52171496.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <ModernFlowType>0</ModernFlowType>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Upload files to sharepoint" />
+      </LocalizedNames>
+    </Workflow>
+  </Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships>
+    <EntityRelationship Name="business_unit_new_opportunity">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>BusinessUnit</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>Restrict</CascadeDelete>
+      <CascadeArchive>Restrict</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningBusinessUnit</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="business_unit_new_opportunityfilereference">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>BusinessUnit</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>Restrict</CascadeDelete>
+      <CascadeArchive>Restrict</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningBusinessUnit</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="lk_new_opportunity_createdby">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="lk_new_opportunity_modifiedby">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="lk_new_opportunityfilereference_createdby">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="lk_new_opportunityfilereference_modifiedby">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="new_OpportunityFileReference_new_Opportunity">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>new_Opportunity</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>RemoveLink</CascadeDelete>
+      <CascadeArchive>RemoveLink</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <CascadeRollupView>NoCascade</CascadeRollupView>
+      <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+      <ReferencingAttributeName>new_OpportunityID</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+      <EntityRelationshipRoles>
+        <EntityRelationshipRole>
+          <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+          <NavPaneArea>Details</NavPaneArea>
+          <NavPaneOrder>10000</NavPaneOrder>
+          <NavigationPropertyName>new_OpportunityID</NavigationPropertyName>
+          <RelationshipRoleType>1</RelationshipRoleType>
+        </EntityRelationshipRole>
+        <EntityRelationshipRole>
+          <NavigationPropertyName>new_OpportunityFileReference_new_Opportunity</NavigationPropertyName>
+          <RelationshipRoleType>0</RelationshipRoleType>
+        </EntityRelationshipRole>
+      </EntityRelationshipRoles>
+    </EntityRelationship>
+    <EntityRelationship Name="owner_new_opportunity">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>Owner</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Owner Id" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="owner_new_opportunityfilereference">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>Owner</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Owner Id" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="team_new_opportunity">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>Team</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="team_new_opportunityfilereference">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>Team</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="user_new_opportunity">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_Opportunity</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+    <EntityRelationship Name="user_new_opportunityfilereference">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>new_OpportunityFileReference</ReferencingEntityName>
+      <ReferencedEntityName>SystemUser</ReferencedEntityName>
+      <CascadeAssign>NoCascade</CascadeAssign>
+      <CascadeDelete>NoCascade</CascadeDelete>
+      <CascadeArchive>NoCascade</CascadeArchive>
+      <CascadeReparent>NoCascade</CascadeReparent>
+      <CascadeShare>NoCascade</CascadeShare>
+      <CascadeUnshare>NoCascade</CascadeUnshare>
+      <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+    </EntityRelationship>
+  </EntityRelationships>
+  <OrganizationSettings />
+  <optionsets />
+  <WebResources>
+    <WebResource>
+      <WebResourceId>{8cf8c419-0643-f011-b4cb-7c1e52171496}</WebResourceId>
+      <Name>new_documentmanagement</Name>
+      <DisplayName>DocumentManagementHTML</DisplayName>
+      <LanguageCode>1033</LanguageCode>
+      <WebResourceType>1</WebResourceType>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+      <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+      <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+      <IsCustomizable>1</IsCustomizable>
+      <CanBeDeleted>1</CanBeDeleted>
+      <IsHidden>0</IsHidden>
+      <FileName>/WebResources/new_documentmanagement8CF8C419-0643-F011-B4CB-7C1E52171496</FileName>
+    </WebResource>
+  </WebResources>
+  <CustomControls />
+  <AppModuleSiteMaps>
+    <AppModuleSiteMap>
+      <SiteMapUniqueName>new_DocumentManagement</SiteMapUniqueName>
+      <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+      <ShowHome>True</ShowHome>
+      <ShowPinned>True</ShowPinned>
+      <ShowRecents>True</ShowRecents>
+      <SiteMap IntroducedVersion="7.0.0.0">
+        <Area Id="area_2b7bc7c8" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+          <Titles>
+            <Title LCID="1033" Title="Area1" />
+          </Titles>
+          <Group Id="group_3d79072f" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+            <SubArea Id="subarea_2d7367d9" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="new_opportunity" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+          </Group>
+        </Area>
+      </SiteMap>
+      <LocalizedNames>
+        <LocalizedName description="Document Management" languagecode="1033" />
+      </LocalizedNames>
+    </AppModuleSiteMap>
+  </AppModuleSiteMaps>
+  <AppModules>
+    <AppModule>
+      <UniqueName>new_DocumentManagement</UniqueName>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+      <OptimizedFor></OptimizedFor>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+      <FormFactor>1</FormFactor>
+      <ClientType>4</ClientType>
+      <NavigationType>0</NavigationType>
+      <AppModuleComponents>
+        <AppModuleComponent type="1" schemaName="new_opportunity" />
+        <AppModuleComponent type="62" schemaName="new_DocumentManagement" />
+      </AppModuleComponents>
+      <AppModuleRoleMaps>
+        <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </AppModuleRoleMaps>
+      <LocalizedNames>
+        <LocalizedName description="Document Management" languagecode="1033" />
+      </LocalizedNames>
+      <appsettings>
+        <appsetting settingdefinitionid.uniquename="AppChannel">
+          <iscustomizable>1</iscustomizable>
+          <value>1</value>
+        </appsetting>
+      </appsettings>
+    </AppModule>
+  </AppModules>
+  <EntityDataProviders />
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="new_sharedsharepointonline_cf768">
+      <connectionreferencedisplayname>SharePoint DocumentManagementPOC-cf768</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sharepointonline</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>
